@@ -22,5 +22,45 @@ For more information on how to use a local server,Please visit following links.
 
 *I have specifically set the link attribute to "//" to support both http and https protocol while fetching p5.js library.This is intended and not a bug.*
 
+# Notes Michel:
+- The book: [The Nature of Code](https://natureofcode.com/introduction/)
+- Use LivePreview plugin to show HTML live in editor.
 
+## Setup
 
+### 1) Create a folder with the following files:
+    - `index.html`
+    - `sketch.js`
+
+### 2) Add this `html` code to the `index.html`:
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js"></script>
+  <meta charset="utf-8" />
+</head>
+
+<body>
+  <script src="sketch.js"></script>
+</body>
+
+</html>
+```
+## 3) And now start coding in the `sketch.js` file...
+There are 2 main function you need:
+```js
+// Set up your screen and canvas
+function setup() {
+    createCanvas(640, 240);
+    background(255);
+}
+  
+// Draw something  
+function draw() {
+    fill(0, 25);
+    stroke(0, 50);
+    circle(random(width),random(height), 16)
+}
+```
